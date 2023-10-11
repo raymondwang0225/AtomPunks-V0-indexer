@@ -33,4 +33,5 @@ atompunk_data_list_v0 = pd.read_json("atompunk_data_list_v0.json")
 st.markdown(
     f'<div style="display: flex; justify-content: center;"><table style="width: 80%; text-align: center;">{atompunk_data_list_v0.to_html(classes="dataframe", index=False)}</table></div>',
     unsafe_allow_html=True
+    
 )
