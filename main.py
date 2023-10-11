@@ -32,7 +32,3 @@ atompunk_data_list_v0 = pd.read_json("atompunk_data_list_v0.json")
 # 在 Streamlit 中显示 DataFrame
 st.dataframe(atompunk_data_list_v0)
 # 使用HTML样式来使表格置中
-st.markdown(
-    f'<div style="display: flex; justify-content: center;">{atompunk_data_list_v0.to_html(classes="dataframe", index=False)}</div>',
-    unsafe_allow_html=True
-)
