@@ -30,5 +30,5 @@ st.title("AtomPunks V0 Indexer")
 atompunk_data_list_v0 = pd.read_json("atompunk_data_list_v0.json")
 
 # 在 Streamlit 中显示 DataFrame
-st.dataframe(atompunk_data_list_v0)
+st.dataframe(atompunk_data_list_v0,height=630,use_container_width =True)
 # 使用HTML样式来使表格置中
