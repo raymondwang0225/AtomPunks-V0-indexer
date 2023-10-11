@@ -25,7 +25,7 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # 创建一个容器
-container = st.beta_container()
+container = st.container()
 
 # 添加一张图片
 image = Image.open("MaIZeKFo_400x400.jpg")
