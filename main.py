@@ -40,6 +40,7 @@ st.data_editor(
         "mint": st.column_config.ProgressColumn(
             "mint volume",
             help="volume of eligible punk mints",
+            format = "%.2f",
             min_value=0,
             max_value=10000,
         ),
