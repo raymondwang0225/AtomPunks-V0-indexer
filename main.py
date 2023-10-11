@@ -26,9 +26,8 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.title("AtomPunks V0 Indexer")
 
+# 加载 JSON 数据到 Pandas DataFrame
+atompunk_data_list_v0 = pd.read_json("atompunk_data_list_v0.json")
 
-atompunk_data_list_v0 =pd.read_json("atompunk_data_list_v0.json")
-
-
-#row size 35 px
-st.dataframe(df)
+# 在 Streamlit 中显示 DataFrame
+st.dataframe(atompunk_data_list_v0)
