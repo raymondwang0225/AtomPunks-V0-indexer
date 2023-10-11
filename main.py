@@ -30,7 +30,6 @@ container = st.container()
 # 添加一张图片
 image = Image.open("MaIZeKFo_400x400.jpg")
 image = image.resize((50, 50))
-image = image.resize((50, 50))
 
 # 在容器内添加标题和图片
 with container:
