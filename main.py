@@ -28,5 +28,9 @@ st.title("AtomPunks V0 Indexer")
 
 # 加载 JSON 数据到 Pandas DataFrame
 atompunk_data_list_v0 = pd.read_json("atompunk_data_list_v0.json")
-
+# 使用HTML样式来使表格置中
+st.markdown(
+    f'<div style="display: flex; justify-content: center;">{atompunk_data_list_v0.to_html(classes="dataframe", index=False)}</div>',
+    unsafe_allow_html=True
+)
 
