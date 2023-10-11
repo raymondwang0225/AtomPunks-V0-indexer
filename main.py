@@ -24,15 +24,18 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+# 创建一个容器
+container = st.beta_container()
 
 # 添加一张图片
 image = Image.open("MaIZeKFo_400x400.jpg")
 image = image.resize((50, 50))
-st.image(image)
+image = image.resize((50, 50))
 
-
-
-st.title("AtomPunks V0 Indexer")
+# 在容器内添加标题和图片
+with container:
+    st.image(image, use_column_width=False, width=50)
+    st.title("AtomPunks V0 Indexer")
 # 加载 JSON 数据到 Pandas DataFrame
 atompunk_data_list_v0 = pd.read_json("atompunk_data_list_v0.json")
 
