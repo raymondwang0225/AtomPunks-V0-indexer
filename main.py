@@ -30,7 +30,7 @@ atompunk_data_list_v0 = pd.read_json("atompunk_data_list_v0.json")
 
 data_df = pd.DataFrame(
     {
-        "mint": len(atompunk_data_list_v0)
+        "mint": [len(atompunk_data_list_v0)]
     }
 )
 
