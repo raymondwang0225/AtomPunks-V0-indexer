@@ -45,6 +45,7 @@ st.data_editor(
             max_value=10000,
         ),
     },
+    use_container_width =True,
     hide_index=True,
 )
 
