@@ -26,6 +26,11 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.title("AtomPunks V0 Indexer")
 
+# 静态完成百分比（例如：80%）
+completion_percentage = 80
+
+# 使用st.bar_chart显示静态条形图
+st.bar_chart(completion_percentage / 100)
 # 加载 JSON 数据到 Pandas DataFrame
 atompunk_data_list_v0 = pd.read_json("atompunk_data_list_v0.json")
 
