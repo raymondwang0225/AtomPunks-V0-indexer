@@ -27,7 +27,9 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # 添加一张图片
 image = Image.open("MaIZeKFo_400x400.jpg")
-st.image(image, use_column_width=True)
+image = image.resize((50, 50))
+st.image(image)
+
 
 
 st.title("AtomPunks V0 Indexer")
