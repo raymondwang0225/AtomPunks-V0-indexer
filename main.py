@@ -25,14 +25,29 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.title("AtomPunks V0 Indexer")
-
-# 静态完成百分比（例如：80%）
-completion_percentage = 80
-
-# 使用st.bar_chart显示静态条形图
-st.bar_chart(completion_percentage / 100)
 # 加载 JSON 数据到 Pandas DataFrame
 atompunk_data_list_v0 = pd.read_json("atompunk_data_list_v0.json")
+
+data_df = pd.DataFrame(
+    {
+        "mint": len(atompunk_data_list_v0)
+    }
+)
+
+st.data_editor(
+    data_df,
+    column_config={
+        "mint": st.column_config.ProgressColumn(
+            "mint volume",
+            help="volume of eligible punk mints",
+            format="%.2f",
+            min_value=0,
+            max_value=10000,
+        ),
+    },
+    hide_index=True,
+)
+
 
 # 在 Streamlit 中显示 DataFrame
 st.dataframe(atompunk_data_list_v0,height=630,use_container_width =True)
