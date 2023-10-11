@@ -31,6 +31,6 @@ atompunk_data_list_v0 = pd.read_json("atompunk_data_list_v0.json")
 
 # 使用HTML样式来使表格置中并最大化尺寸
 st.markdown(
-    f'<div style="display: flex; justify-content: center;"><table style="width: 100%; max-width: 100%; text-align: center;">{atompunk_data_list_v0.to_html(classes="dataframe", index=False)}</table></div>',
+    f'<div style="display: flex; justify-content: center;"><table style="width: 50%; max-width: 50%; text-align: center;">{atompunk_data_list_v0.to_html(classes="dataframe", index=False)}</table></div>',
     unsafe_allow_html=True
 )
