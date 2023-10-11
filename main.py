@@ -24,6 +24,12 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+
+# 添加一张图片
+image = Image.open("MaIZeKFo_400x400.jpg")
+st.image(image, use_column_width=True)
+
+
 st.title("AtomPunks V0 Indexer")
 # 加载 JSON 数据到 Pandas DataFrame
 atompunk_data_list_v0 = pd.read_json("atompunk_data_list_v0.json")
